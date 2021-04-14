@@ -1,5 +1,4 @@
-<h1>hellooooooooooooo</h1>
+<h4>Index</h4>
 <% @boats.each do |boat| %>
-  <p><%= boat.name %> | <%= boat.color %> | <%= boat.capacity %></p>
-  <hr />
+  <p><a href="/boats/<%= boat.id %>"><%= boat.name %></a></p>
 <% end %>
