@@ -20,7 +20,7 @@ class BoatsController < ApplicationController
       capacity: params[:capacity]
     )
     @boat.save
-    render "show.html.erb"
+    redirect_to "/boats/#{@boat.id}"
   end
 
 
