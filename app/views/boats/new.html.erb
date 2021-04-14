@@ -1,0 +1,7 @@
+<h4>Create</h4>
+<%= form_tag "/boats", method: :post do %>
+  <p>Name: <input name="name"></p>
+  <p>Color: <input name="color"></p>
+  <p>Capacity: <input name="capacity"></p>
+  <input type="submit" value="Create">
+<% end %>

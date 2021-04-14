@@ -9,7 +9,19 @@ class BoatsController < ApplicationController
     render "show.html.erb"
   end
 
-  def create
-    render "create.html.erb"
+  def new
+    render "new.html.erb"
   end
+
+  def create
+    @boat = Boat.new(
+      name: params[:name],
+      color: params[:color],
+      capacity: params[:capacity]
+    )
+    @boat.save
+    render "show.html.erb"
+  end
+
+
 end
