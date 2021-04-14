@@ -22,6 +22,19 @@ class BoatsController < ApplicationController
     @boat.save
     redirect_to "/boats/#{@boat.id}"
   end
+  
+  def update
+    @boat = Boat.find(params[:id])
+    @boat.update(
+      name: params[:name] || @boat.name,
+      color: params[:color] || @boat.color,
+      capacity: params[:capacity] || @boat.capacity,
+    )
+    redirect_to "/boats/#{@boat.id}"
+  end
 
-
+  def edit
+    @boat = Boat.find(params[:id])
+    render "edit.html.erb"
+  end
 end

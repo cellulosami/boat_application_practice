@@ -1,0 +1,7 @@
+<h4>edit</h4>
+<%= form_tag "/boats/" + params[:id], method: :patch do %>
+  <p>Name: <input name="name" value="<%= @boat.name %>"></p>
+  <p>Color: <input name="color" value="<%= @boat.color %>"></p>
+  <p>Capacity: <input name="capacity" value="<%= @boat.capacity %>"></p>
+  <input type="submit" value="Edit">
+<% end %>
