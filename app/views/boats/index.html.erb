@@ -1,1 +1,5 @@
 <h1>hellooooooooooooo</h1>
+<% @boats.each do |boat| %>
+  <p><%= boat.name %> | <%= boat.color %> | <%= boat.capacity %></p>
+  <hr />
+<% end %>
