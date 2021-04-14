@@ -1,4 +1,5 @@
 <h4>Index</h4>
+<a href="/boats/new"><button>Create new boat</button></a>
 <% @boats.each do |boat| %>
   <p><a href="/boats/<%= boat.id %>"><%= boat.name %></a></p>
 <% end %>
